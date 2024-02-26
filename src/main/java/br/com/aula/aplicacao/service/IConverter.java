@@ -1,8 +1,11 @@
 package br.com.aula.aplicacao.service;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
+import java.util.List;
 
 public interface IConverter {
 
-    <T> T obterDados(String json, Class<T> classe) throws JsonProcessingException;
+    <T> T converter(String json, Class<T> classe);
+
+    <T> List<T> converterList(String json, Class<T> classe);
+
 }
